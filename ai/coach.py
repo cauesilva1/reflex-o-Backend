@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+print("Chave da API carregada:", "Sim" if OPENROUTER_API_KEY else "Não")  # Log temporário
 
 async def generate_reflection(input_text: str, type_: str, language: str = "pt") -> str:
     try:
